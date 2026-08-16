@@ -15,7 +15,9 @@ MODEL_PATH = os.path.join(
 
 model = joblib.load(MODEL_PATH)
 
-
+for root, dirs, files in os.walk("/content"):
+    if "data_register.py" in files:
+        print(os.path.join(root, "data_register.py"))
 # ---------------------------------------------------------
 # Streamlit page configuration
 # ---------------------------------------------------------
